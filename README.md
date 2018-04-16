@@ -1,10 +1,14 @@
+# Fork
+
+This is published as `vuepress-html-webpack-plugin` to be used in VuePress. This is to fix a situation when the user installs a version of `html-webpack-plugin` that is compatible with VuePress' (which causes it to be hoisted to `node_modules` root) but also with a version of webpack that is incompatible. Because `html-webpack-plugin` directly make requires into webpack internals, it ends up requiring the internal modules from the incompatible version of webpack.
+
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
 ![npm](https://img.shields.io/npm/dw/html-webpack-plugin.svg)
 [![deps][deps]][deps-url]
 [![tests][tests]][tests-url]
 [![Backers on Open Collective](https://opencollective.com/html-webpack-plugin/backers/badge.svg)](#backers)
- [![Sponsors on Open Collective](https://opencollective.com/html-webpack-plugin/sponsors/badge.svg)](#sponsors) 
+ [![Sponsors on Open Collective](https://opencollective.com/html-webpack-plugin/sponsors/badge.svg)](#sponsors)
 
 <div align="center">
   <img width="200" height="200" src="https://worldvectorlogo.com/logos/html5.svg">
@@ -56,7 +60,7 @@ The `html-webpack-plugin` provides [hooks](https://github.com/jantimon/html-webp
  * [html-webpack-inline-style-plugin](https://github.com/djaax/html-webpack-inline-style-plugin) for inlining styles to HTML elements using [juice](https://github.com/Automattic/juice). Useful for email generation automatisation.
  * [html-webpack-exclude-empty-assets-plugin](https://github.com/KnisterPeter/html-webpack-exclude-empty-assets-plugin) removes empty assets from being added to the html. This fixes some problems with extract-text-plugin with webpack 4.
  * [webpack-concat-plugin](https://github.com/hxlniada/webpack-concat-plugin) for concat and uglify files that needn't to be webpack bundles(for legacy files) and inject to html-webpack-plugin.
- 
+
 
 <h2 align="center">Usage</h2>
 
