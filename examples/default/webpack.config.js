@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('../..');
 var webpackMajorVersion = require('webpack/package.json').version.split('.')[0];
+
 module.exports = {
   context: __dirname,
   entry: './example.js',
@@ -10,8 +11,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+    rules: [
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.png$/, loader: 'file-loader' }
     ]
   },
